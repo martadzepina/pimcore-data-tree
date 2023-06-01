@@ -18,10 +18,22 @@ body {
 
 .preview {
   flex-grow: 1;
-  background-color: whitesmoke;
   padding: 20px;
+  background-color: whitesmoke;
 }
 
-.tree {
-  min-width: 250px;
+.tree-row {
+  white-space: nowrap;
+}
+
+.node {
+  cursor: pointer;
+}
+
+.expand-button {
+  padding: 0 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
 }
