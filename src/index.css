@@ -17,7 +17,7 @@ body {
 }
 
 .preview {
-  flex-grow: 1;
+  flex: 1 1 0;
   padding: 20px;
   background-color: whitesmoke;
 }

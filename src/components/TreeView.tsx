@@ -4,7 +4,7 @@ import { getMockTreeData } from "../util/dataUtils";
 import TreeNode from "./TreeNode";
 
 const TreeView: FC = () => {
-  const data = getMockTreeData();
+  const data = getMockTreeData(1, 10000);
 
   return (
     <Tree
