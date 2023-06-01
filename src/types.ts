@@ -17,3 +17,7 @@ export interface Details {
   description: string;
   image: string;
 }
+
+export interface DetailsSubmit {
+  showDetails: (id: string) => void;
+}

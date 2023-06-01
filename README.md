@@ -37,7 +37,7 @@
 
 - 2.1k stars on github
 - `overscanCount` - adds additional items that are not currently displayed, but are used to reduce the chance the user is scrolling faster than virtualized content can be rendered
-- very good performance (especially if all items are not expanded)
+- very good performance
 - easy appearance customization
 - touch ready
 
@@ -47,4 +47,4 @@
 
 # Conclusion
 
-- react-arborist
+- my recommendation is react-arborist

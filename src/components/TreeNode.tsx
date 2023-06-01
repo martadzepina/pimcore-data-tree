@@ -2,6 +2,7 @@ import { FC, PropsWithChildren } from "react";
 import { NodeRendererProps } from "react-arborist";
 import { TreeData } from "../types";
 import { getNodeChildren } from "../util/apiUtil";
+import useDetailSubmit from "../store/useDetailSubmit";
 
 const quantityColors = {
   green: "#018749",
@@ -9,13 +10,11 @@ const quantityColors = {
   red: "#CC0000",
 };
 
-type Props = PropsWithChildren<
-  NodeRendererProps<TreeData> & {
-    onShowDetails: (id: string) => void;
-  }
->;
+type Props = PropsWithChildren<NodeRendererProps<TreeData>>;
 
-const TreeNode: FC<Props> = ({ node, style, onShowDetails }) => {
+const TreeNode: FC<Props> = ({ node, style }) => {
+  const { showDetails } = useDetailSubmit();
+
   const { type, name, quantityState, workflowState } = node.data;
 
   const button = node.isClosed ? "+" : "-";
@@ -36,7 +35,7 @@ const TreeNode: FC<Props> = ({ node, style, onShowDetails }) => {
   };
 
   const handleFocus = () => {
-    onShowDetails(node.data.id);
+    showDetails(node.data.id);
   };
 
   return (
