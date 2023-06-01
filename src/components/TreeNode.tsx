@@ -4,7 +4,7 @@ import { TreeData } from "../types";
 import { getNodeChildren } from "../util/apiUtil";
 import useDetailSubmit from "../store/useDetailSubmit";
 
-const quantityColors = {
+const qualityColors = {
   green: "#018749",
   yellow: "#FFC72C",
   red: "#CC0000",
@@ -15,10 +15,10 @@ type Props = PropsWithChildren<NodeRendererProps<TreeData>>;
 const TreeNode: FC<Props> = ({ node, style }) => {
   const { showDetails } = useDetailSubmit();
 
-  const { type, name, quantityState, workflowState } = node.data;
+  const { type, name, qualityState, workflowState } = node.data;
 
   const button = node.isClosed ? "+" : "-";
-  const labelStyle = { color: quantityColors[quantityState] };
+  const labelStyle = { color: qualityColors[qualityState] };
 
   const handleToggle = async () => {
     if (node.isClosed) {

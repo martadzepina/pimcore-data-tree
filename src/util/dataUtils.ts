@@ -1,7 +1,7 @@
 import { TreeData } from "../types";
 import { v4 as uuidv4 } from "uuid";
 
-const quantityValues = {
+const qualityValues = {
   1: "green",
   2: "yellow",
   3: "red",
@@ -22,8 +22,8 @@ export const getMockTreeData = (level = 1, num = 5, childNum = 0) => {
   const list = [];
   for (let i = 0; i < num; i += 1) {
     const id = uuidv4();
-    const quantity =
-      quantityValues[getRandomNumber(1, 3) as keyof typeof quantityValues];
+    const quality =
+      qualityValues[getRandomNumber(1, 3) as keyof typeof qualityValues];
     const workflow =
       workflowValues[getRandomNumber(1, 4) as keyof typeof workflowValues];
 
@@ -31,7 +31,7 @@ export const getMockTreeData = (level = 1, num = 5, childNum = 0) => {
       id,
       type: "type",
       name: "name",
-      quantityState: quantity,
+      qualityState: quality,
       workflowState: workflow,
       description: "description...",
       isLoading: false,

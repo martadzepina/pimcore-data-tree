@@ -2,7 +2,7 @@ export interface TreeData {
   id: string;
   type: string;
   name: string;
-  quantityState: "green" | "yellow" | "red";
+  qualityState: "green" | "yellow" | "red";
   workflowState: "todo" | "in progress" | "in review" | "done";
   description: string;
   isLoading: boolean;
